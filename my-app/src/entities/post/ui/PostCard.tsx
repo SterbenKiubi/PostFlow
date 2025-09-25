@@ -1,3 +1,4 @@
+import styles from "./PostCard.module.css"
 export interface Post {
     userId: number,
     id: number,
@@ -11,11 +12,11 @@ interface PostCardProps {
 
 export const PostCard = ( { post }: PostCardProps ) => {
     return (
-        <div className="post-card">
+        <div className={styles.postCard}>
             <h2>Title: {post.title}</h2>
-            <p>userId: {post.userId}</p>
-            <p>id: {post.id}</p>
-            <p>body: {post.body}</p>
+            <p><span>userId:</span> {post.userId}</p>
+            <p><span>id:</span> {post.id}</p>
+            <p><span>body:</span> {post.body}</p>
         </div>
     )
 };
