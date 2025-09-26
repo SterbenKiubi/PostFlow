@@ -1,9 +1,11 @@
-import { useTheme } from "../../lib/theme/useTheme";
 import styles from "./Button.module.css";
+interface ButtonProps {
+    onClick: () => void;
+    children: React.ReactNode;
+}
 
-export const Button = () => {
-    const { isDark, toggleTheme } = useTheme();
+export const Button = ( { onClick, children }: ButtonProps ) => {
     return (
-        <button className={styles.button} onClick={toggleTheme}>{isDark ? 'Light theme' : 'Dark theme'}</button>
+        <button className={styles.button} onClick={onClick}>{children}</button>
     )
 };

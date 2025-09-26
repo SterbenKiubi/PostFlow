@@ -1,12 +1,12 @@
 import styles from "./Header.module.css";
-import { Button } from "../../shared/ui/Button/Button";
+import { ThemeSwitcher } from "../../features/ThemeSwitcher/ui/ThemeSwitcher";
 
 export const Header = () => {
 
     return (
         <header className={styles.header}>
             <h1>PostFlow App</h1>
-            <Button />
+                <ThemeSwitcher></ThemeSwitcher>
         </header>
     )
 };
