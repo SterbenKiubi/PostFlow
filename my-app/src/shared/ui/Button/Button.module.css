@@ -6,6 +6,5 @@
 
 .button:hover {
     cursor: pointer;
-    width: 8%;
     font-size: 15px;
 }

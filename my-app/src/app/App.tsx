@@ -1,6 +1,6 @@
 import { MainLayout } from '../shared/layouts/MainLayout';
 import { useTheme } from '../shared/lib/theme/useTheme';
-import '../App.css'
+import '../App.css';
 
 function App() {
   const { isDark } = useTheme();
