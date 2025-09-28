@@ -1,0 +1,12 @@
+.postCard {
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 8px;
+}
+.postCard p {
+    font-style: italic;
+}
+.postCard p span {
+    font-size: 20px;
+    font-weight: bold;
+}
