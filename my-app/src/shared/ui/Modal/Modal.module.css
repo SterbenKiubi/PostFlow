@@ -46,3 +46,22 @@
     background-color: #f0f0f0;
     border-radius: 50%;
 }
+
+.modalHeader {
+    background-color: rgb(185, 166, 166);
+    border-radius: 8px;
+    padding: 0 15px;
+    width: 50%;
+}
+
+.modalBody {
+    margin: 10px 0;
+}
+
+.modalFooter {
+    font-size: 18px;
+}
+
+.modalFooter a{
+    text-decoration: none;
+}
