@@ -1,0 +1,10 @@
+.button {
+    width: 7%;
+    border-radius: 8px;
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    font-size: 15px;
+}
