@@ -1,3 +1,17 @@
 .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     align-self: center;
+}
+
+.modalButton {
+    border: none;
+    border-radius: 8px;
+    padding: 0 5px;
+}
+
+.modalButton:hover {
+    cursor: pointer;
+    font-size: 15px;
 }
