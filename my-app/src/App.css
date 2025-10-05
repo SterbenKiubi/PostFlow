@@ -1,9 +1,25 @@
 #root {
-  max-width: 1280px;
   height: 100vh;
-  margin: 0 auto;
-  padding: 2rem;
+}
+
+.app {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.app.dark {
+  background-color: #23272f;
+}
+.app.dark h1 {
+  color: white;
+}
+.app.dark h2 {
+  color: white;
+}
+
+.app.dark p {
+  color: white;
 }
