@@ -3,6 +3,7 @@ import type { FC } from "react";
 import { PostsPage } from "../../../pages/PostsPage/PostsPage";
 import { MainLayout } from "../../../shared/layouts/MainLayout";
 import { UserLayout } from "../../../shared/layouts/UserLayout";
+import { UserPostsPage } from "../../../pages/UserPostsPage/UserPostsPage";
 
 const router = createBrowserRouter([
     {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
                 path: "users/:id",
                 element: <UserLayout />,
                 children: [
-                    { path: "posts", element: <div>User Posts</div> },
+                    { path: "posts", element: <UserPostsPage /> },
                     { path: "albums", element: <div>User Albums</div> },
                     { path: "todos", element: <div>User Todos</div> },
                 ]

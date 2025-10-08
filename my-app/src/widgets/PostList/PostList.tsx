@@ -1,5 +1,4 @@
 import { Fragment, useState, useCallback, useMemo } from "react";
-import { mockPosts } from "../../shared/mocks/posts";
 import type { Post } from "../../entities/post/ui/PostCard";
 import { PostCard } from "../../entities/post/ui/PostCard";
 import styles from "./PostList.module.css";
@@ -8,7 +7,11 @@ import { mockComments } from "../../shared/mocks/comments";
 import { PostLengthFilter } from "../../features/PostLengthFilter/ui/PostLengthFilter";
 import { filterByLength } from "../../features/PostLengthFilter/lib/filterByLength";
 
-export const PostListContent = () => {
+interface PostListProps {
+    posts: Post[];
+}
+
+export const PostListContent = ({ posts }: PostListProps) => {
     const [minLength, setMinLength] = useState(0);
 
     const handleMinLengthChange = useCallback((newMinLength: number) => {
@@ -16,8 +19,8 @@ export const PostListContent = () => {
     }, []);
 
     const filteredPosts = useMemo(() => 
-        filterByLength(mockPosts, minLength),
-        [minLength]
+        filterByLength(posts, minLength),
+        [posts, minLength]
     );
 
     const getPostComments = useCallback((postId: number) => {
