@@ -33,22 +33,20 @@ export const PostCard = ( { post, comments }: PostCardProps ) => {
     };
 
     const user: User | undefined = mockUsers.find(
-        (user) => user.id === post.id,
+        (user) => user.id === post.userId,
     );
 
     return (
         <div className={styles.postCard}>
             <h2 className={styles.cardTitle}>
-                <Link
-                    to={`/posts/${post.id}`}>
+                <Link to={`/posts/${post.id}`}>
                     Title: {post.title}
                 </Link>
             </h2>
             <p><span>userId:</span> {post.userId}</p>
             <p><span>id:</span> {post.id}</p>
             <p><span>body:</span> {post.body}</p>
-            <Link
-                to={`/users/${post.id}/posts`}>
+            <Link to={`/users/${post.userId}/posts`}>
                 <p className={styles.cardAuthor}>
                     <span>Author: </span>{user?.name}
                 </p>
@@ -56,9 +54,7 @@ export const PostCard = ( { post, comments }: PostCardProps ) => {
             <Button onClick={toggleComments}>
                 {isCommentsOpen ? "Close comments ▲" : "Show comments ▼"}
             </Button>
-            {isCommentsOpen
-            ? <CommentList comments={comments} /> 
-            : null}
+            {isCommentsOpen && <CommentList comments={comments} />}
         </div>
     )
 };
