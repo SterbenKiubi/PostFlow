@@ -4,3 +4,9 @@
     gap: 5px;
     margin: 10px 0;
 }
+
+.container {
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 8px;
+}
