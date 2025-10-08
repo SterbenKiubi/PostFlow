@@ -1,11 +1,15 @@
-import { MainLayout } from '../shared/layouts/MainLayout'
-import '../App.css'
+import { useTheme } from '../shared/lib/theme/useTheme';
+import '../App.css';
+import { Router } from './providers/router/Router';
 
 function App() {
+  const { isDark } = useTheme();
 
   return (
-    <MainLayout />
+      <div className={`app ${isDark ? 'dark' : 'light'}`}>
+        <Router />
+      </div>
   )
 }
 
-export default App
+export default App;
