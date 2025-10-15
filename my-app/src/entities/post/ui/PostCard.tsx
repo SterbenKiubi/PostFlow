@@ -58,6 +58,3 @@ export const PostCard = ( { post, comments }: PostCardProps ) => {
         </div>
     )
 };
-
-
-
