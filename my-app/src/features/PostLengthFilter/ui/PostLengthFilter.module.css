@@ -1,0 +1,12 @@
+.filterContainer {
+    padding: 10px;
+    background: rgb(245, 243, 243);
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.filterInput {
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+}

@@ -11,8 +11,16 @@ export const Header = () => {
             <h1>PostFlow App</h1>
             <button className={styles.modalButton} onClick={() => setIsOpen(true)}>Открыть модальное окно</button>
             <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-                <h2>О проекте</h2>
-                <p>Приложение постов</p>
+                <Modal.Header>
+                    <h2>О проекте</h2>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>Приложение постов</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <a href="https://github.com/SterbenKiubi"
+                    target="_blank">SterbenKiubi</a>
+                </Modal.Footer>
             </Modal>
             <ThemeSwitcher />
         </header>

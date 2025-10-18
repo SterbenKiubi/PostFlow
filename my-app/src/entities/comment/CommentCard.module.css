@@ -1,0 +1,10 @@
+.commentContent {
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.commentEmail {
+    font-weight: bold;
+}
