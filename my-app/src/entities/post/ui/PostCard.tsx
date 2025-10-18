@@ -4,6 +4,8 @@ import { Button } from "../../../shared/ui/Button/Button";
 import { CommentList } from "../../../widgets/CommentList/ui/CommentList";
 import { Link } from "react-router-dom";
 import { useGetUserByIdQuery } from "../../user/api/usersApi";
+import { useGetCommentsByPostIdQuery } from "../../comment/api/commentsApi";
+
 export interface Post {
     userId: number,
     id: number,
@@ -21,11 +23,14 @@ export interface Comment {
 
 interface PostCardProps {
     post: Post;
-    comments: Comment[];
 };
 
-export const PostCard = ( { post, comments }: PostCardProps ) => {
+export const PostCard = ( { post }: PostCardProps ) => {
     const [isCommentsOpen, setIsCommentsOpen] = useState(false);
+
+    const { data: comments } = useGetCommentsByPostIdQuery(post.id, {
+        skip: !isCommentsOpen
+    });
 
     const toggleComments = () => {
         setIsCommentsOpen(prev => !prev);
@@ -51,7 +56,7 @@ export const PostCard = ( { post, comments }: PostCardProps ) => {
             <Button onClick={toggleComments}>
                 {isCommentsOpen ? "Close comments ▲" : "Show comments ▼"}
             </Button>
-            {isCommentsOpen && <CommentList comments={comments} />}
+            {isCommentsOpen && comments && <CommentList comments={comments} />}
         </div>
     )
 };
