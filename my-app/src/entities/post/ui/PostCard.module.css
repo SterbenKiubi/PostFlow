@@ -1,4 +1,6 @@
 .postCard {
+    display: flex;
+    flex-direction: column;
     border: 1px solid gray;
     padding: 5px;
     border-radius: 8px;
@@ -9,4 +11,26 @@
 .postCard p span {
     font-size: 20px;
     font-weight: bold;
+}
+
+.cardTitle:hover {
+    font-size: 25px;
+}
+
+.cardTitle a{
+    text-decoration: none;
+}
+
+.cardAuthor {
+    padding: 10px 0;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.cardAuthor:hover {
+    font-size: 25px;
+}
+
+.cardAuthor a {
+    text-decoration: none;
 }
