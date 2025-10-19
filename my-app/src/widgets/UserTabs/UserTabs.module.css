@@ -1,0 +1,21 @@
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.userName {
+    font-size: 20px;
+}
+
+.navigation {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 18px;
+}
