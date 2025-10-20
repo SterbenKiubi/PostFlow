@@ -1,16 +1,20 @@
 import ReactDOM from "react-dom";
 import styles from "./Modal.module.css";
-import type { FC, ReactNode } from "react";
+import type { FC, PropsWithChildren } from "react";
 import { ModalHeader } from "./ModalHeader";
 import { ModalBody } from "./ModalBody";
 import { ModalFooter } from "./ModalFooter";
+
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
-    children: ReactNode;
-};
+}
 
-const ModalComponent: FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const ModalComponent: FC<PropsWithChildren<ModalProps>> = ({ 
+    isOpen, 
+    onClose, 
+    children 
+}) => {
     if (!isOpen) return null;
 
     return ReactDOM.createPortal(
