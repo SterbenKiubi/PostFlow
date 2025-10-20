@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import styles from "./withLoading.module.css";
-import type { Post } from "../../../entities/post/ui/PostCard";
+import type { Post } from "../../../entities/post/model/types";
 
 interface PostListProps {
     posts: Post[];

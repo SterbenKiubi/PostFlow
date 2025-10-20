@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { Post } from "../../../../entities/post/ui/PostCard";
+import type { Post } from "../../../../entities/post/model/types";
 import { mockPosts } from "../../../../shared/mocks/posts";
 
 interface UsePostsProps {

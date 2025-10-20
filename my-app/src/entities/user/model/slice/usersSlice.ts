@@ -1,5 +1,5 @@
 import { createEntityAdapter, createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { User } from "../../../../shared/mocks/users";
+import type { User } from "../types";
 import { usersApi } from "../../api/usersApi";
 
 const usersAdapter = createEntityAdapter<User>();

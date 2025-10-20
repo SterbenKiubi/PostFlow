@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import type { User } from "../../shared/mocks/users";
+import type { User } from "../../entities/user/model/types";
 import { mockUsers } from "../../shared/mocks/users";
 import { NavLink, useParams } from "react-router-dom";
 import styles from "./UserTabs.module.css";
