@@ -5,13 +5,7 @@ import { CommentList } from "../../../widgets/CommentList/ui/CommentList";
 import { Link } from "react-router-dom";
 import { useGetUserByIdQuery } from "../../user/api/usersApi";
 import { useGetCommentsByPostIdQuery } from "../../comment/api/commentsApi";
-
-export interface Post {
-    userId: number,
-    id: number,
-    title: string,
-    body: string
-};
+import type { Post } from "../model/types";
 
 export interface Comment {
     postId: number;

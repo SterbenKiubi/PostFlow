@@ -1,9 +1,8 @@
 import { Fragment, useState, useCallback, useMemo } from "react";
-import type { Post } from "../../entities/post/ui/PostCard";
+import type { Post } from "../../entities/post/model/types";
 import { PostCard } from "../../entities/post/ui/PostCard";
 import styles from "./PostList.module.css";
 import { withLoading } from "../../shared/lib/hoc/withLoading";
-import { mockComments } from "../../shared/mocks/comments";
 import { PostLengthFilter } from "../../features/PostLengthFilter/ui/PostLengthFilter";
 import { filterByLength } from "../../features/PostLengthFilter/lib/filterByLength";
 
