@@ -7,14 +7,6 @@ import { useGetUserByIdQuery } from "../../user/api/usersApi";
 import { useGetCommentsByPostIdQuery } from "../../comment/api/commentsApi";
 import type { Post } from "../model/types";
 
-export interface Comment {
-    postId: number;
-    id: number;
-    name: string;
-    email: string;
-    body: string;
-};
-
 interface PostCardProps {
     post: Post;
 };

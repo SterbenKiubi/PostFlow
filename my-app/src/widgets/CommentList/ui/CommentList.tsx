@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import type { Comment } from "../../../entities/post/ui/PostCard";
+import type { Comment } from "../../../entities/comment/model/types";
 import { CommentCard } from "../../../entities/comment/CommentCard";
 import styles from "./CommentList.module.css";
 
