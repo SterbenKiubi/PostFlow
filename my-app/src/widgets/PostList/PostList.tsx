@@ -5,6 +5,7 @@ import styles from "./PostList.module.css";
 import { withLoading } from "../../shared/lib/hoc/withLoading";
 import { PostLengthFilter } from "../../features/PostLengthFilter/ui/PostLengthFilter";
 import { filterByLength } from "../../features/PostLengthFilter/lib/filterByLength";
+import { ItemList } from "../../shared/ui/ItemList/ItemList";
 
 interface PostListProps {
     posts: Post[];
@@ -22,22 +23,23 @@ export const PostListContent = ({ posts }: PostListProps) => {
         [posts, minLength]
     );
 
+    const renderPost = useCallback((post: Post) => (
+        <Fragment key={post.id}>
+            <PostCard post={post} />
+        </Fragment>
+    ), []);
+
     return (
         <div className={styles.container}>
             <PostLengthFilter 
                 minLength={minLength}
                 onMinLengthChange={handleMinLengthChange}/>
             
-            <div className={styles.postList}>
-                {filteredPosts.map((post: Post) => {
-                    
-                    return (
-                        <Fragment key={post.id}>
-                            <PostCard post={post} />
-                        </Fragment>
-                    );
-                })}
-            </div>
+            <ItemList
+                items={filteredPosts}
+                renderItem={renderPost}
+                className={styles.postList}
+            />
         </div>
     )
 };
