@@ -23,10 +23,6 @@ export const PostListContent = ({ posts }: PostListProps) => {
         [posts, minLength]
     );
 
-    const getPostComments = useCallback((postId: number) => {
-        return mockComments.filter(comment => comment.postId === postId);
-    }, []);
-
     return (
         <div className={styles.container}>
             <PostLengthFilter 
@@ -35,11 +31,10 @@ export const PostListContent = ({ posts }: PostListProps) => {
             
             <div className={styles.postList}>
                 {filteredPosts.map((post: Post) => {
-                    const postComments = getPostComments(post.id);
                     
                     return (
                         <Fragment key={post.id}>
-                            <PostCard post={post} comments={postComments} />
+                            <PostCard post={post} />
                         </Fragment>
                     );
                 })}
