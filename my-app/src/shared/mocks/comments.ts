@@ -1,4 +1,4 @@
-import type { Comment } from "../../entities/post/ui/PostCard";
+import type { Comment } from "../../entities/comment/model/types";
 
 export const mockComments: Comment[] = [
     {
